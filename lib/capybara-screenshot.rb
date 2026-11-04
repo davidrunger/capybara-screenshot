@@ -147,7 +147,7 @@ end
 # The block should return `:not_supported` if a screenshot could not be saved.
 Capybara::Screenshot.class_eval do
   register_driver(:default) do |driver, path|
-    driver.render(path)
+    driver.save_screenshot(path, :full => true)
   end
 
   register_driver(:rack_test) do |driver, path|

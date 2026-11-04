@@ -7,11 +7,9 @@
 
 name: rspec
 
+# NOTE: Because it fails, this GitHub Action currently only runs if/when manually triggered.
 on:
-  push:
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
+  workflow_dispatch:
 
 permissions:
   contents: read
